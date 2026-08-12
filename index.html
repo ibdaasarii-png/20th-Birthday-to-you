@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Birthday Note</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Musik -->
+    <audio id="music" loop>
+        <source src="lagu.mpeg" type="audio/mpeg">
+    </audio>
+
+
+    <!-- Bunga -->
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌷</div>
+    <div class="flower flower3">🎂</div>
+    <div class="flower flower4">🌸</div>
+
+
+    <!-- =========================
+         HALAMAN PEMBUKA
+    ========================== -->
+
+    <section id="cover" class="screen">
+
+        <div class="card cover-card">
+
+            <small>
+                A LITTLE SOMETHING FOR YOU 
+            </small>
+
+            <div class="bouquet">
+                🎂🌷
+            </div>
+
+            <h1>
+                Happy Birthday
+                
+            </h1>
+            <h2>
+                Fikri Hidayat Pulungan
+            </h2>
+
+            <p>
+                Ada yang ingin aku sampaikan
+                di hari spesial kamu.
+            </p>
+
+            <button onclick="openLetter()">
+                Klik disini yaa 🤍
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ISI WEB
+    ========================== -->
+
+    <main id="letter" class="hidden">
+
+        <div class="card content-card" id="content">
+
+            <!-- Isi akan muncul melalui JavaScript -->
+
+        </div>
+
+    </main>
+
+
+
+   <!-- MUSIC PLAYER -->
+
+<div class="music-player">
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()">
+
+        ▶
+
+    </button>
+
+    <div class="music-info">
+
+        <span>
+            NOW PLAYING
+        </span>
+
+        <strong>
+            HoneyBee ♫
+        </strong>
+
+    </div>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

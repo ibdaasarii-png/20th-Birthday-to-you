@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+
+/* =========================
+   DASAR
+========================= */
+
+:root {
+    --brown: #5c4a3d;
+    --dark: #765c4a;
+    --muted: #8a7667;
+    --rose: #a98f7e;
+    --cream: #fffaf4;
+    --line: rgba(118, 92, 74, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: var(--brown);
+
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            #e8d8c9 0,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            #dcc8b8 0,
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #f8f1ea,
+            #efe2d6
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   BUNGA
+========================= */
+
+.flower {
+    position: fixed;
+
+    top: -40px;
+
+    z-index: 0;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+    animation: fall 12s linear infinite;
+}
+
+.flower1 {
+    left: 10%;
+}
+
+.flower2 {
+    left: 35%;
+
+    animation-delay: 2s;
+
+    animation-duration: 14s;
+}
+
+.flower3 {
+    left: 60%;
+
+    animation-delay: 4s;
+}
+
+.flower4 {
+    left: 85%;
+
+    animation-delay: 1s;
+
+    animation-duration: 15s;
+}
+
+@keyframes fall {
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(280deg);
+    }
+
+}
+
+
+/* =========================
+   HALAMAN
+========================= */
+
+.screen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    background:
+        rgba(255, 250, 244, 0.90);
+
+    border:
+        1px solid var(--line);
+
+    border-radius:
+        32px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(90, 65, 50, 0.10);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+.cover-card {
+
+    width:
+        min(650px, 100%);
+
+    padding:
+        60px 35px;
+
+    text-align:
+        center;
+
+    animation:
+        appear 0.8s ease;
+}
+
+.cover-card small {
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+}
+
+.bouquet {
+
+    font-size:
+        60px;
+
+    margin:
+        20px 0 10px;
+
+    animation:
+        bob 3s ease-in-out infinite;
+}
+
+@keyframes bob {
+
+    50% {
+        transform:
+            translateY(-7px)
+            rotate(2deg);
+    }
+
+}
+
+h1,
+h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+}
+
+h1 {
+
+    font-size:
+        clamp(48px, 9vw, 82px);
+
+    line-height:
+        0.9;
+
+    margin:
+        0;
+
+    font-weight:
+        600;
+}
+
+h1 span {
+
+    color:
+        var(--dark);
+}
+
+.cover-card p {
+
+    max-width:
+        450px;
+
+    margin:
+        28px auto;
+
+    color:
+        var(--muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border:
+        none;
+
+    padding:
+        14px 28px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--dark);
+
+    color:
+        white;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(118, 92, 74, 0.22);
+
+    transition:
+        0.25s;
+}
+
+button:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   ISI
+========================= */
+
+#letter {
+
+    min-height:
+        100vh;
+
+    padding:
+        70px 0;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+.content-card {
+
+    width:
+        min(720px, 92%);
+
+    margin:
+        auto;
+
+    padding:
+        50px 40px;
+
+    text-align:
+        center;
+
+    animation:
+        appear 0.6s ease;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.eyebrow {
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+}
+
+.content-card h2 {
+
+    font-size:
+        46px;
+
+    margin:
+        12px 0 18px;
+}
+
+.message {
+
+    max-width:
+        560px;
+
+    margin:
+        auto;
+
+    color:
+        var(--muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        2;
+}
+
+
+/* =========================
+   DOA
+========================= */
+
+.wish {
+
+    margin-top:
+        25px;
+
+    padding:
+        30px 25px;
+
+    background:
+        rgba(255, 249, 241, 0.85);
+
+    border:
+        1px solid var(--line);
+
+    border-radius:
+        24px;
+
+    text-align:
+        left;
+
+    animation:
+        itemIn 0.6s ease;
+}
+
+.wish b {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        28px;
+}
+
+.wish p {
+
+    margin:
+        10px 0 0;
+
+   color: var(--muted);
+
+    line-height: 1.9;
+
+    font-size: 14px;
+    
+    white-space: pre-line;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.photo {
+
+    margin-top:
+        25px;
+
+    padding:
+        15px;
+
+    background:
+        rgba(255, 250, 244, 0.92);
+
+    border:
+        1px solid var(--line);
+
+    border-radius:
+        26px;
+
+    animation:
+        itemIn 0.6s ease;
+}
+
+.photo img {
+
+    width:
+        min(100%, 520px);
+
+    max-height:
+        520px;
+
+    object-fit:
+        contain;
+
+    display:
+        block;
+
+    margin:
+        auto;
+
+    border-radius:
+        18px;
+}
+
+.photo p {
+
+    margin:
+        15px 5px 5px;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.note {
+
+    margin-top:
+        25px;
+
+    padding:
+        30px;
+
+    background:
+        rgba(255, 248, 239, 0.92);
+
+    border-radius:
+        22px;
+
+    text-align:
+        left;
+}
+
+.note p {
+
+    color:
+        #62525b;
+
+    font-size:
+        15px;
+
+    line-height:
+        2;
+
+    margin:
+        0 0 20px;
+}
+
+.closing {
+
+    text-align:
+        center;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    color:
+        var(--dark);
+
+    font-size:
+        25px;
+
+    margin-top:
+        25px;
+}
+
+.signature {
+
+    text-align:
+        right;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-style:
+        italic;
+
+    font-size:
+        21px;
+
+    color:
+        var(--dark);
+
+    margin-top:
+        25px;
+}
+
+
+/* =========================
+   TOMBOL NEXT
+========================= */
+
+.next {
+
+    margin-top:
+        30px;
+}
+
+
+/* =========================
+   ENDING
+========================= */
+
+.ending {
+
+    padding:
+        30px 10px;
+}
+
+.ending-flower {
+
+    font-size:
+        48px;
+
+    margin-bottom:
+        15px;
+}
+
+.ending small {
+
+    letter-spacing:
+        3px;
+
+    color:
+        var(--rose);
+
+    font-size:
+        10px;
+}
+
+.ending h2 {
+
+    font-size:
+        38px;
+
+    margin:
+        10px 0;
+}
+
+.ending p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+}
+
+.ending span {
+
+    display:
+        block;
+
+    margin-top:
+        25px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+}
+
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 15px 8px 8px;
+
+    background:
+        rgba(255, 250, 244, 0.94);
+
+    border:
+        1px solid
+        rgba(118, 92, 74, 0.15);
+
+    border-radius:
+        50px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(80, 55, 70, 0.15);
+
+    backdrop-filter:
+        blur(10px);
+
+    z-index: 100;
+}
+
+
+/* Tombol Play */
+
+.music-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--dark);
+
+    color:
+        white;
+
+    font-size:
+        13px;
+
+    flex-shrink: 0;
+}
+
+
+/* Informasi lagu */
+
+.music-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding-right: 5px;
+}
+
+
+/* Tulisan kecil */
+
+.music-info span {
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--muted);
+
+    margin-bottom:
+        2px;
+}
+
+
+/* Judul lagu */
+
+.music-info strong {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        17px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--brown);
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    .music-player {
+
+        right:
+            12px;
+
+        bottom:
+            12px;
+
+    }
+
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+@keyframes itemIn {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover-card,
+    .content-card {
+
+        width:
+            calc(100% - 20px);
+
+        padding:
+            40px 22px;
+    }
+
+    .content-card h2 {
+
+        font-size:
+            38px;
+    }
+
+    .photo img {
+
+        width:
+            100%;
+    }
+
+    .note {
+
+        padding:
+            25px 20px;
+    }
+
+    .music-button {
+
+        right:
+            15px;
+
+        bottom:
+            15px;
+    }
+
+}
